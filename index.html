@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="container mx-auto">
+    <div class="border-2 mx-auto w-1/4 border-purple-500 rounded-2xl flex items-center justify-center">
+        <button onclick="handleSearch()" class="  text-xl  px-4 flex items-center justify-between">
+            <input id="serach-input" type="text" placeholder="Search Hear.........."
+                class="outline-none  w-full text-xl p-2 rounded-xl " />
+            Search</button>
+    </div>
+    <div id="loading-spinner" class="text-center py-40 hidden">
+        <span class="loading loading-spinner loading-lg bg-purple-600"></span>
+    </div>
+    <!-- <button onclick="loardData()" class="btn text-center w-full text-2xl font-semibold">Click</button> -->
+    <!-- <h1 class="text-6xl text-center">Mobile Hunger </h1> -->
+
+    <section>
+        <div id="container"
+            class="grid lg:grid-cols-3 md:grid-cols-2 container mx-auto mt-4 items-center justify-center">
+            <!-- <div class="card w-96 bg-base-100 shadow-xl grid grid-cols-4"> -->
+            <!-- <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+    <div class="card-body">
+        <h2 class="text-center text-4xl font-semibold">Shoes!</h2>
+        <p>If a dog chews shoes whose shoes does he choose?</p>
+        <div class="card-actions justify-end">
+            <button class="btn btn-primary w-full text-xl ">Buy Now</button>
+        </div>
+    </div> -->
+            <!-- </div> -->
+        </div>
+        <div id="show-btn" class="w-full hidden items-center justify-center">
+
+            <button onclick="handleShowAll()" class="btn btn-primary text-center  ">Show All</button>
+        </div>
+    </section>
+    <section>
+
+        <dialog id="show_modal" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box ">
+                <div class="grid items-center justify-center w-96 mx-auto " id="show-details-container">
+                </div>
+                <form method="dialog" class="w-full mx-auto text-center">
+                    <button class="btn btn-primary  text-xl text-center ">Close</button>
+                </form>
+            </div>
+        </dialog>
+    </section>
+    <script src="index.js"></script>
+</body>
+
+</html>
